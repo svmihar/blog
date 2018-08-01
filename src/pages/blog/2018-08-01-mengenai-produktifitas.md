@@ -62,3 +62,5 @@ manusia untuk menunda.
 From a quick cheer to a standing ovation, clap to show how much you enjoyed this
 story.
 
+
+
