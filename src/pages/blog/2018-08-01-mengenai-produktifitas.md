@@ -43,7 +43,7 @@ hujan pun datang, jas hujan dipinjam. Seolah tidak ingin membuang duit untuk
 menyewa GrabCar saya memutuskan untuk menunggu dalam gelap.
 
 Perasaan tidak melakukan apa-apa seolah tak berdaya tidak dapat “produktif demi
-interdependensi manusia” membuat saya berpikir. Apakah manusia disebut berguna
+interdependensi manusia” memnpm buat saya berpikir. Apakah manusia disebut berguna
 ketika dia bekerja untuk orang lain? Apakah manusia menemukan jati dirinya
 ketika diakui oleh orang lain? Lantas orang lain itu siapa untuk mendefinisikan
 jati diri kita? Apakah kita dapat menemukan jati diri kita dari kehampaan?
