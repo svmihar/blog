@@ -12,7 +12,7 @@ Hello, Sumihar Christian here. Simple guy simple problems, tapi bukan *simple gu
 Basically I'm proving myself wrong. Getting out of the comfort zone kinda thing. Saya yakin banyak sekali post yang banyak bercanda dan rant tertulis secara formal maupun informal dengan makna yang implisit. Low-key ~~mafaka~~. 
 
 ### tapi pengen
-Mainly content di sini dipenuhi tentang computer projects, shower thoughts and things that requires your left brain functioning. But if you prefer to see my editing related stuff especially bagian video editing breakdowns or video projects that I got langsung ke [Medium](https://www.medium.com/@svmihar "Tingkat absurd: membingungkan"), because you separation of concern ~~mafaka~~. 
+Mainly content di sini dipenuhi tentang computer projects, shower thoughts and things that requires your left brain functioning. But if you prefer to see my editing related stuff especially bagian video editing breakdowns or video projects that I got langsung ke [Medium](https://www.medium.com/@svmihar "Tingkat absurd: membingungkan"), because you separate the concerns ~~mafaka~~. 
 
 ### keluar:
 This blog is made possible with [Gatsby.js](https://www.gatsbyjs.org/ "Static site generator yang super simple dan boilerplate yang gampang ngeditnya") sebagai front-end, hosting memakai Github Pages dan di handle oleh Netlify(site deploy, cdn, dan continues deployment buat Github). Domain nya masih pakai yang gratisan punya Freenom karena anak kos, cari makananan sehat masih menjadi prioritas ketimbang hosting. Saya mengerti semua ini dengan melihat tutorial dari mas [Scott Tolinski](http://scotttolinski.com/) di Playlist [Pro Gatsby](https://www.youtube.com/watch?v=evAUPPs7fB0).  
