@@ -47,7 +47,7 @@ const Navbar = () => (
           target="_blank"
         > 
           <span className="icon">
-            <img src={instagram} alt="instagram" />
+            <img src={instagram} alt="Instagram" />
           </span>
         </a>
         <a
