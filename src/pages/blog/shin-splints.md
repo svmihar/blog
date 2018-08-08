@@ -17,7 +17,7 @@ Serta banyak pelajaran juga yang telah dipetik. Tapi yang paling terlihat pastil
 > **Loh tumben mau lari, biasanya jam segini baru tidur**   
 > *Ibu, jam 05.30 WIB*
 
-whoa, you? doing sports? rly?
+whoa, me? doing sports? rly?
 ------
 #### korelasi ngoding-berlari: positif.
 Saya menyadari kalau olahraga itu penting buat ngoding. How? Fokus. Jaman sekarang semua orang membuat semuanya terdistraksi, dari iklan di Lazada, Notif comment di Instagram, LINE message dari doi semuanya membuat fokus terpecah dan sulit berkonsentrasi dalam satu hal. I suck at multi-tasking. Gak akan ada pekerjaan yang selesai kalo saya memecah konsentrasi untuk beberapa pekerjaan.    
