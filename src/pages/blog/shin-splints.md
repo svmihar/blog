@@ -41,7 +41,7 @@ Pernah tau menorah candles on Hanukkah celebration? Jews usually light em up set
 <img src="/img/crisis.jpg" class="center smaller"/>  
 <br/>
 
-So this U-shape curve is actually pretty common amongst this midpoint crisis stuff, ada contoh dari [monyet](http://www.pnas.org/content/109/49/19949), [americans](https://onlinelibrary.wiley.com/doi/full/10.1111/ecoj.12256), even small things like cutting roses shape on papers. 
+So this U-shape curve is actually pretty common amongst this midpoint crisis stuff, ada contoh dari [monyet](http://www.pnas.org/content/109/49/19949), [americans](https://onlinelibrary.wiley.com/doi/full/10.1111/ecoj.12256), even small things like cutting roses shape on papers. Hell, even sport shows does half-time shows. People got bored on sports even too eventually. 
 
 #### shin-splints
 Saya bukan pakar medis apalagi kesehatan (dude, indomie is lyf.) tapi disaat pohon menjadi lebih tinggi, disitulah angin bertiup lebih kencang. I got side-splints. Ini bukan penyakit tapi (**TL;DR**) bengkak di bagian otot, tendon dan bone tissue di bagian tibia I won't explain this further because I hate biology, tapi kalo mau info lebih lanjut silahkan hubungi [dokter](https://orthoinfo.aaos.org/en/diseases--conditions/shin-splints/). It hurts. Big time. Bahkan di saat jalan biasa setelah lari pun masih terasa sakitnya. Jujur this bumps me out on continuing this 30 day challenge. I really wanted to make running as my habit. This is the main reason why I slump on midpoint.   
@@ -63,8 +63,25 @@ So is this going to be it?
 
 really? For a beginner runner like me? Do I need to postpone? Do I?
 
-Kalau boleh jujur I don't want to continue this challenge karena damn.. Kebayang ya yang lumpuh beneran seumur hidup carrying one's mass onto one foot only. Tapi, when life gives you lemon, what do you give back? Whining?
+Kalau boleh jujur I don't want to continue this challenge karena damn.. Kebayang ya yang lumpuh beneran seumur hidup carrying one's mass onto one foot only. Tapi, when life gives you lemon, what do you give back? Whining? 😂 Pathetic. You go on. 
 
+some solutions
+------
+#### What works
+**Burn the ship?**   
+What I mean is, melakukan sesuatu yang tidak reversibel supaya termotivasi untuk lanjut terus. I kinda do this. Kinda. I buy MiBand 3 supaya bisa ngetrack my activities dan ini adalah investasi yang cukup menarik. Karena selain motivasi untuk lari bertambah dengan keinginan mengalahkan "old-self", bukan externally, internally 
+
+**Set interim goals**
+Baby steps my friend, little tiny baby goals. Instead of reaching big goals like 5K with 6 minute pace! Just set something more "approachable", and gradually increase the goal. Saya pribadi punya target 7 menit pace, whatever the distance is. Week by week I make shorter 10%.
+
+**Appreciate failure**
+Ini cliché but unavoidable. Self compassion itu bagi saya penting, karena it pinpoints my weaknesses and make it stronger or at least much better than before. 
+
+### What doesn't work (at least with me)
+**Precommitment, Commiting stuff publicly**  
+nope. I motivate myself internally, not externally. Terus ini juga borderline pamer, social climbing dan influencer type shit. Installing Strava dan/atau Nike+ Running biar termotivasi karena kompetisi dengan yang lain? Do you try to outrun others or your inner self? This isn't aligned with my principle so, yeah, didn't work, won't work. 
+
+**
 ---
-The thing is, at least I know what's slowing me down. Do you?
+The thing is, at least know what's slowing you down, make some solution, test it, finally choose something that makes you most comfortable. It doesn't have to be cost efficient, but at least you're **doing** it. 
 
