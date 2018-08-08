@@ -77,7 +77,7 @@ Baby steps my friend, little tiny baby goals. Instead of reaching big goals like
 **Appreciate failure**
 Ini cliché but unavoidable. Self compassion itu bagi saya penting, karena it pinpoints my weaknesses and make it stronger or at least much better than before. 
 
-### What doesn't work (at least with me)
+### What doesn't work (at least for me)
 **Precommitment, Commiting stuff publicly**  
 nope. I motivate myself internally, not externally. Terus ini juga borderline pamer, social climbing dan influencer type shit. Installing Strava dan/atau Nike+ Running biar termotivasi karena kompetisi dengan yang lain? Do you try to outrun others or your inner self? This isn't aligned with my principle so, yeah, didn't work, won't work. 
 
