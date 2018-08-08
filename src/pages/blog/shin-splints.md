@@ -81,7 +81,6 @@ Ini cliché but unavoidable. Self compassion itu bagi saya penting, karena it pi
 **Precommitment, Commiting stuff publicly**  
 nope. I motivate myself internally, not externally. Terus ini juga borderline pamer, social climbing dan influencer type shit. Installing Strava dan/atau Nike+ Running biar termotivasi karena kompetisi dengan yang lain? Do you try to outrun others or your inner self? This isn't aligned with my principle so, yeah, didn't work, won't work. 
 
-**
 ---
 The thing is, at least know what's slowing you down, make some solution, test it, finally choose something that makes you most comfortable. It doesn't have to be cost efficient, but at least you're **doing** it. 
 
