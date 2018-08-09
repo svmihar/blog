@@ -72,7 +72,7 @@ some solutions
 What I mean is, melakukan sesuatu yang tidak reversibel supaya termotivasi untuk lanjut terus. I kinda do this. Kinda. I buy MiBand 3 supaya bisa ngetrack my activities dan ini adalah investasi yang cukup menarik. Karena selain motivasi untuk lari bertambah dengan keinginan mengalahkan "old-self", bukan externally, internally 
 
 **Set interim goals**   
-Baby steps my friend, little tiny baby goals. Instead of reaching big goals like 5K with 6 minute pace! Just set something more "approachable", and gradually increase the goal. Saya pribadi punya target 7 menit pace, whatever the distance is. Week by week I make shorter 10%.
+Baby steps my friend, little tiny baby goals. Instead of reaching big goals like 5K with 6 minute pace! Just set something more "approachable", and gradually increase the goal. I increment my goal by 10% every week if I achieved the last goal.
 
 **Appreciate failure**    
 Ini cliché but unavoidable. Self compassion itu bagi saya penting, karena it pinpoints my weaknesses and make it stronger or at least much better than before. 
