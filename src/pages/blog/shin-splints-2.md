@@ -26,6 +26,6 @@ Disini juga ada [printable version nya](https://downloads.bbc.co.uk/scotland/mak
 <img src="/img/run.jpg" class="center"/>  
 
 ### jadi...
-  I run with one day intervals. *One day rest, one day run*. Take things slow. Enjoy the process, karena tujuan dari ikutan beginian adalah membangun kebiasaan, dan menikmati ketika berlari (enjoying pure pain;) bukan untuk mencapai 30 hari without skipping a day. Jadi ya refine your goals and do enjoy the process. Kalua merasa memang tidak bisa mencapai tujuannya... Still you got lessons learned. For me, a goal is reached when you enjoy the little steps you take everyday, in this case, **learn to REST! **
+  I run with one day intervals. *One day rest, one day run*. Take things slow. Enjoy the process, karena tujuan dari ikutan beginian adalah membangun kebiasaan, dan menikmati ketika berlari (enjoying pure pain;) bukan untuk mencapai 30 hari without skipping a day. Jadi ya refine your goals and do enjoy the process. Kalua merasa memang tidak bisa mencapai tujuannya... Still you got lessons learned. For me, a goal is reached when you enjoy the little steps you take everyday, in this case, **learn to REST!**
 
 
