@@ -4,7 +4,7 @@ path: /about
 title: about this
 ---
 
-Hello, Sumihar Christian here. Simple guy simple problems, tapi bukan *simple guy problems*. Originally **batak-born** tapi jadi half-javanese karena *koncone akeh arek<sup>2</sup> Suroboyo, ya opo maneh lur kudu eruh bosone lek gak, ra iso neng warkop murah.*  Setelah mengerti kalo ngequery NoSQL lebih mudah dari nyuruh cewek melakukan sesuatu yang saya inginkan maka saya jadi ingin pola hidup yang seimbang, weekday programmer, weekend video editor.  
+Hello, Sumihar Christian here. I like to beautify crap with JavaScript and speed my workflow with Python. Besides coding I love to shoot and edit videos! 
 
 ---
 
