@@ -18,7 +18,7 @@ const TemplateWrapper = ({ children }) => (
         { rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }
     ]}/>
     <Navbar />
-    <div>{children()}</div>
+    <div>{children()}</div> 
   </div>
 )
 
