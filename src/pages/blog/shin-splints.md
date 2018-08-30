@@ -61,7 +61,7 @@ So is this going to be it?
 ------
 ![remedies](/img/shin-splint.jpg)
 
-really? For a beginner runner like me? Do I need to postpone? Do I?
+really? For a beginner runner like me? Do I need to postpone?    
 
 Kalau boleh jujur I don't want to continue this challenge karena damn.. Kebayang ya yang lumpuh beneran seumur hidup carrying one's mass onto one foot only. Tapi, when life gives you lemon, what do you give back? Whining? 😂 Pathetic. You go on. 
 
