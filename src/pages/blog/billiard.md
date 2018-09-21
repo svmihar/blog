@@ -33,6 +33,8 @@ dengan berada dengan jarak yang cukup dekat dengan perokok dan ruangan yang tert
 
 enggak sedih sebenernya cuman kesel aja sotoy bener ni orang. 
 
+
+### yang saya pelajari dari billiard. 
 masalah ini sebenernya tidak perlu menjadi besar jika orang-orang mau mengurus dirinya sendiri tanpa harus mencampuri urusan orang lain. baik perokok maupun non perokok seharusnya bisa mepunyai hak dan pandangn secara umum yang sama. toh sama-sama berada di dunia, sama-sama mempunyai masalah dalam hidupnya kok perlakuannya berbeda, yang menjadi korban adalah "kecelakaan" seperti saya. berada di waktu dan tempat yang tidak tepat. sebenernya bukan tidak tepat tapi situasinya dan kondisinya saja yang spesial sehingga membuat orang salah mengambil kesimpulan. 
 
 
