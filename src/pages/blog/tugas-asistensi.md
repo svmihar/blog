@@ -5,9 +5,7 @@ date: 2018-10-24T12:17:21.936Z
 description: >-
   tugas (BESAR)kecil
 tags:
-    - billiard
-    - personal 
-    - 8ball
+    - asistensi
 ---
 # deskripsi tugas
 membuat kalkulator dengan kriteria: 
