@@ -39,4 +39,4 @@ berbentuk laporan dengan format:
 ### body email: 
 diisi dengan penjelasan singkat dari seluruh fitur yang ada pada kalkulatornya, nama lengkap dan NRP masing-masing kelompok dengan peran serta membuat tugas ini    
 <small>(ingat, penjelasan singkat. Peran dari masing-masing anggota harus jelas dan detail)</small>
-# Paling lambat <b>Selasa 30 Oktober 2018 pukul 00.00 WIB</b>
+# Paling lambat <b>Selasa 30 Oktober 2018 pukul 23.59 WIB</b>
