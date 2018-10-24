@@ -21,8 +21,8 @@ demo program yang menunjukkan fitur-fiturnya
 -------------------:|-------------:	|
 Penggunaan OOP    	| 40%         	|
 Fitur Dasar       	| 30%         	|
-Fitur Unik        	| 10%         	|
 Presentasi        	| 20%         	|
+Fitur Unik        	| 10%         	|
 
 # format pengiriman 
 dikirim ke `s.christian15@mhs.matematika.its.ac.id`
