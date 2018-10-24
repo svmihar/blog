@@ -8,7 +8,7 @@ tags:
     - asistensi
 ---
 # deskripsi tugas
-membuat kalkulator dengan kriteria: 
+membuat kalkulator memakai Java dengan kriteria: 
 - sesuai paradigma OOP
 - minimal fiturnya adalah kalkulator pasar
 - semakin unik semakin baik   
