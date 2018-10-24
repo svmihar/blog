@@ -13,14 +13,16 @@ membuat kalkulator dengan kriteria:
 - minimal fiturnya adalah kalkulator pasar
 - semakin unik semakin baik   
 
+demo program yang menunjukkan fitur-fiturnya
 # fitur dasar
 <img src="https://s12emagst.akamaized.net/products/14501/14500602/images/res_03a71ff180fdab0cd6663061f64286ca_full.jpg" class="center smaller"/>     
 
  Kriteria Penilian 	| Bobot Nilai 	|
 -------------------:|-------------:	|
 Penggunaan OOP    	| 40%         	|
-Fitur Dasar       	| 40%         	|
-Fitur Unik        	| 20%         	|
+Fitur Dasar       	| 30%         	|
+Fitur Unik        	| 10%         	|
+Presentasi        	| 20%         	|
 
 # format pengiriman 
 dikirim ke `s.christian15@mhs.matematika.its.ac.id`
