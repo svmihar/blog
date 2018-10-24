@@ -16,7 +16,7 @@ membuat kalkulator dengan kriteria:
 - semakin unik semakin baik   
 
 # fitur dasar
-<img src="https://www.penjualan.co/bestsellers/1050/product/img/9007896062/w-700/Kalkulator_Casio_MJ_120_T__Kalkulator_12_digit__Kalkulator_M.jpg" class="center smaller"/>     
+<img src="https://s12emagst.akamaized.net/products/14501/14500602/images/res_03a71ff180fdab0cd6663061f64286ca_full.jpg" class="center smaller"/>     
 
  Kriteria Penilian 	| Bobot Nilai 	|
 -------------------:|-------------:	|
