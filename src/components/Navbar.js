@@ -43,15 +43,6 @@ const Navbar = () => (
         </a>
         <a
           className="navbar-item"
-          href="https://instagram.com/tian.rar/"
-          target="_blank"
-        > 
-          <span className="icon">
-            <img src={instagram} alt="Instagram" />
-          </span>
-        </a>
-        <a
-          className="navbar-item"
           href="https://medium.com/@svmihar/"
           target="_blank"
         > 
