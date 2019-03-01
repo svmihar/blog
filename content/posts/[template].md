@@ -1,15 +1,15 @@
 ---
-title: INSERT TITLE HERE
-date: "2017-08-19T22:40:32.169Z"
-template: "post"
-draft: false
-slug: "/posts/u-shouldn't-be-seeing-this/"
-category: "template"
-tags:
-  - "Design"
-  - "Typography"
-  - "Web Development"
-description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
+# title: INSERT TITLE HERE
+# date: "2017-08-19T22:40:32.169Z"
+# template: "post"
+# draft: false
+# slug: "/posts/u-shouldn't-be-seeing-this/"
+# category: "template"
+# tags:
+#   - "Design"
+#   - "Typography"
+#   - "Web Development"
+# description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
 ---
 
 - [The first transition](#the-first-transition)

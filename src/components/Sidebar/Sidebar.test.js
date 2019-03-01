@@ -14,11 +14,7 @@ describe('Sidebar', () => {
               bio: 'bio',
               contacts: {
                 email: '#',
-                twitter: '#',
-                vkontakte: '#',
                 github: '#',
-                rss: '#',
-                telegram: '#'
               }
             },
             copyright: 'copyright',

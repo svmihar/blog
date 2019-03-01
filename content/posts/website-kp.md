@@ -1,13 +1,14 @@
 ---
-templateKey: 'blog-post'
-title: 'website kp matematika its 2015 + imposter syndrome = '
-date: 2018-08-29T10:30:38.000Z
-description: >-
-  tembok jericho
+title: sebuah website kp
+date: "2018-08-29T10:30:38.000Z"
+template: "post"
+draft: false
+slug: "/posts/website-kp/"
+category: "template"
 tags:
-    - project
-    - website
-    - personal
+  - "javascript"
+  - "Web Development"
+description: "sebuah pengalaman webdev yang kurang menyenangkan yang seru"
 ---
 last day of magang. dapat banyak, jauh lebih banyak daripada kuliah selama ini. (mainly because kebanyakan yang dipelajari di kp ini searah dengan cita-cita), seneng sih, tapi sedih juga. Schrödinger's emotion. wkwk. 
 today i started to run again, setelah 8 hari istirahat. serius istirahat karena saya memutuskan untuk lari 17km, literally running. 

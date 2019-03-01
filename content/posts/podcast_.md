@@ -1,26 +1,25 @@
 ---
-title: things to hear when snoozing
+title: tutorial memanggil setan dengan bilangan kompleks
 date: "2019-02-28T08:17:21.153Z"
 template: "post"
 draft: false
 slug: "/posts/podcasts/"
 category: "music"
 tags:
-  - "Design"
-  - "Typography"
-  - "Web Development"
-description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
+  - "podcast"
+  - "music"
+  - "ears"
+description: "korelasi antara musik dan bilangan kompleks. enggak deh. koleksi podcast seorang svmihar"
 ---
 hearing podcast doesn't makes you smart 
-
 - [podcast bagi saya adalah...](#podcast-bagi-saya-adalah)
 - [apps](#apps)
 - [things that i listened to:](#things-that-i-listened-to)
-	- [programming](#programming)
-	- [productivity](#productivity)
-	- [life](#life)
-	- [couples and relationship](#couples-and-relationship)
-	- [music.](#music)
+  - [programming](#programming)
+  - [productivity](#productivity)
+  - [life](#life)
+  - [couples and relationship](#couples-and-relationship)
+  - [music.](#music)
 - [parting words](#parting-words)
 
 
@@ -50,10 +49,22 @@ for python:
 - SuperDataScience: this is some career stuff talking. 
 ## productivity
 - Developer Tea: super singkat like 10 minutes podcast. Good when listening when having coffee, discusses how normal people see programmers and how to "act" like a ninja/rockstar/[buzzword_here] programmer
-## life
+- The Accidental Creative: practical everyday practices on working professionally. 
+- Beyond To do list: time management stuff, self financial management juga dibahas
 - 
+## life
+- Freakonomics radio: informatif buat nyari insight tentang investasi buat orang non ekonomi seperti saya. yang gak peduli dengan jargon2 ekonomi tapi pengen belajar tentang "investasi" 
+- Become More Compelling: ini seperti buku 'How to Win Friends and Influence People' tapi adaptasi abad 21-nya. 
+- Real Talk Radio: Issues yang banyak taboo di masyarakat, seperti feminisme, male privelege dan teman2nya deh. seru kalo lagi real drama yang bisa disdiskusikan dengan significan other (biar gak gosip mulu)
+- Coder radio: mengenal programmer2 di bidang lain kayak, devOps, Cloud Engineer, Site Reliability, dan banyak banget. Bahasannya juga ringan seputar programming news 
+- The Skeptics Guide to universe: literally bahas semuanya tapi pake pembuktian. intresting stuff here
 ## couples and relationship
-
+- Candy and Casey's Couple Therapy: They're abrupt honesty makes my heart melt. too much freedom is bad tapi seru kalo bareng sama teman sejiwa. 
+- Arif and Tipang podcast: i need to be present. pandangan pasangan millenial sama yang 40 tahun nikah kan beda. enak punya spectrum yang luas tentang relationship. walaupun kalo yang ini banyak cringe-nya (*pencitraan*) tapi ya gpp, anggap aja contoh yang buruk
 ## music. 
-
+[lagu buat ngoding](https://open.spotify.com/playlist/672Ac3wNgcexsoiY9hiLmu) | 
+[lagu buat lari](https://open.spotify.com/playlist/672Ac3wNgcexsoiY9hiLmu) | 
+[lagu buat cangkruk](https://open.spotify.com/playlist/6J5HH7RGdrc73vO9myjaZt)
 # parting words
+> music is like complex number equation, it shows what real state cannot explain. 
+I walk a lot that's why I fill my 'kekosongan' with all these voices.
