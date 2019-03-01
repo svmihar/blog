@@ -4,7 +4,7 @@ date: "2018-08-29T10:30:38.000Z"
 template: "post"
 draft: false
 slug: "/posts/website-kp/"
-category: "template"
+category: "dev"
 tags:
   - "javascript"
   - "Web Development"

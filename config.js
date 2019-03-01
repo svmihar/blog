@@ -27,10 +27,10 @@ module.exports = {
     photo: '/photo.jpg',
     bio: 'wadidaw kalo dibalik tetep wadidaw.',
     contacts: {
-      email: '#',
+      email: 'svmihar@gmail.com',
       telegram: '#',
       twitter: '#',
-      github: '#',
+      github: 'svmihar',
       rss: '#',
       vkontakte: '#'
     }
