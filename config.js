@@ -29,7 +29,7 @@ module.exports = {
     contacts: {
       email: 'svmihar@gmail.com',
       telegram: '#',
-      twitter: 'svmihar',
+      twitter: '#',
       github: 'svmihar',
       rss: '#',
       vkontakte: '#'
