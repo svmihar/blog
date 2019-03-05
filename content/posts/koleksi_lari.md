@@ -1,6 +1,6 @@
 ---
 title: berlari
-date: "#"
+date: "2010-03-05T20:13:21.159Z"
 template: "post"
 draft: false
 slug: "/posts/svmihar-running/"
