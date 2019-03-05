@@ -6,10 +6,10 @@ draft: false
 slug: "/posts/data-mining-UB/"
 category: "talk"
 tags:
-  - "Public Speaking"
-  - "Python"
-  - "Data Science"
-  - 
+  - "coding"
+  - "python"
+  - "data-science"
+  - "talk"
 description: "data mining workshop di Universitas Brawijaya"
 ---
 
