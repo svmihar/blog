@@ -18,7 +18,7 @@ description: "data mining workshop di Universitas Brawijaya"
 ![ub means universitas brawijaya, loved the unbraw abbreviation tho.](https://i.imgur.com/bffsi4O.png)
 
 ### update v1
-![this kind of workshop ternyata takes several days, bahkan sampe dibikin bootcamp. i cramp it into 3 hours.](https://github.com/thisismetis/dsp) approach nya sangat noob proof later i will use this kind of format. 
+[this kind of workshop ternyata takes several days, bahkan sampe dibikin bootcamp. i cramp it into 3 hours.](https://github.com/thisismetis/dsp) approach nya sangat noob proof. kalo ada kesempatan lagi i'll definitely use this as a precourse material. 
 
 # kok bisa
 awalnya gak nyangka diajak buat ikutan seminar. Diajak ikutan berarti asumsi awal adalah **mengikuti** seminar tentang data mining, bukan mengisi kan, karena dirasa saya masih perlu banyak belajar jadi saya memutuskan secara langsung gak pake mikir buat ikutan. Ternyata *tidak*
