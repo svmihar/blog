@@ -8,12 +8,6 @@
     padding: 0 15px;
   }
 
-  &__comments {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
   &__home-button {
     display: block;
     max-width: 90px;
@@ -45,9 +39,6 @@
       padding: 0;
     }
 
-    &__comments {
-      padding: 0;
-    }
 
     &__home-button {
       position: fixed;
