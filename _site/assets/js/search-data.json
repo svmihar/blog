@@ -1,0 +1,116 @@
+{
+  
+    
+        "post0": {
+            "title": "Fastpages Notebook Blog Post",
+            "content": "About . This notebook is a demonstration of some of capabilities of fastpages with notebooks. . With fastpages you can save your jupyter notebooks into the _notebooks folder at the root of your repository, and they will be automatically be converted to Jekyll compliant blog posts! . Front Matter . The first cell in your Jupyter Notebook or markdown blog post contains front matter. Front matter is metadata that can turn on/off options in your Notebook. It is formatted like this: . # &quot;My Title&quot; &gt; &quot;Awesome summary&quot; - toc:true- branch: master- badges: true- comments: true - author: Hamel Husain &amp; Jeremy Howard - categories: [fastpages, jupyter] . Setting toc: true will automatically generate a table of contents | Setting badges: true will automatically include GitHub and Google Colab links to your notebook. | Setting comments: true will enable commenting on your blog post, powered by utterances. | . The title and description need to be enclosed in double quotes only if they include special characters such as a colon. More details and options for front matter can be viewed on the front matter section of the README. . Markdown Shortcuts . A #hide comment at the top of any code cell will hide both the input and output of that cell in your blog post. . A #hide_input comment at the top of any code cell will only hide the input of that cell. . The comment #hide_input was used to hide the code that produced this. . put a #collapse-hide flag at the top of any cell if you want to hide that cell by default, but give the reader the option to show it: . #collapse-hide import pandas as pd import altair as alt . . put a #collapse-show flag at the top of any cell if you want to show that cell by default, but give the reader the option to hide it: . #collapse-show cars = &#39;https://vega.github.io/vega-datasets/data/cars.json&#39; movies = &#39;https://vega.github.io/vega-datasets/data/movies.json&#39; sp500 = &#39;https://vega.github.io/vega-datasets/data/sp500.csv&#39; stocks = &#39;https://vega.github.io/vega-datasets/data/stocks.csv&#39; flights = &#39;https://vega.github.io/vega-datasets/data/flights-5k.json&#39; . . Interactive Charts With Altair . Charts made with Altair remain interactive. Example charts taken from this repo, specifically this notebook. . Example 1: DropDown . # single-value selection over [Major_Genre, MPAA_Rating] pairs # use specific hard-wired values as the initial selected values selection = alt.selection_single( name=&#39;Select&#39;, fields=[&#39;Major_Genre&#39;, &#39;MPAA_Rating&#39;], init={&#39;Major_Genre&#39;: &#39;Drama&#39;, &#39;MPAA_Rating&#39;: &#39;R&#39;}, bind={&#39;Major_Genre&#39;: alt.binding_select(options=genres), &#39;MPAA_Rating&#39;: alt.binding_radio(options=mpaa)} ) # scatter plot, modify opacity based on selection alt.Chart(movies).mark_circle().add_selection( selection ).encode( x=&#39;Rotten_Tomatoes_Rating:Q&#39;, y=&#39;IMDB_Rating:Q&#39;, tooltip=&#39;Title:N&#39;, opacity=alt.condition(selection, alt.value(0.75), alt.value(0.05)) ) . Example 2: Tooltips . alt.Chart(movies).mark_circle().add_selection( alt.selection_interval(bind=&#39;scales&#39;, encodings=[&#39;x&#39;]) ).encode( x=&#39;Rotten_Tomatoes_Rating:Q&#39;, y=alt.Y(&#39;IMDB_Rating:Q&#39;, axis=alt.Axis(minExtent=30)), # use min extent to stabilize axis title placement tooltip=[&#39;Title:N&#39;, &#39;Release_Date:N&#39;, &#39;IMDB_Rating:Q&#39;, &#39;Rotten_Tomatoes_Rating:Q&#39;] ).properties( width=600, height=400 ) . Example 3: More Tooltips . # select a point for which to provide details-on-demand label = alt.selection_single( encodings=[&#39;x&#39;], # limit selection to x-axis value on=&#39;mouseover&#39;, # select on mouseover events nearest=True, # select data point nearest the cursor empty=&#39;none&#39; # empty selection includes no data points ) # define our base line chart of stock prices base = alt.Chart().mark_line().encode( alt.X(&#39;date:T&#39;), alt.Y(&#39;price:Q&#39;, scale=alt.Scale(type=&#39;log&#39;)), alt.Color(&#39;symbol:N&#39;) ) alt.layer( base, # base line chart # add a rule mark to serve as a guide line alt.Chart().mark_rule(color=&#39;#aaa&#39;).encode( x=&#39;date:T&#39; ).transform_filter(label), # add circle marks for selected time points, hide unselected points base.mark_circle().encode( opacity=alt.condition(label, alt.value(1), alt.value(0)) ).add_selection(label), # add white stroked text to provide a legible background for labels base.mark_text(align=&#39;left&#39;, dx=5, dy=-5, stroke=&#39;white&#39;, strokeWidth=2).encode( text=&#39;price:Q&#39; ).transform_filter(label), # add text labels for stock prices base.mark_text(align=&#39;left&#39;, dx=5, dy=-5).encode( text=&#39;price:Q&#39; ).transform_filter(label), data=stocks ).properties( width=700, height=400 ) . Data Tables . You can display tables per the usual way in your blog: . movies = &#39;https://vega.github.io/vega-datasets/data/movies.json&#39; df = pd.read_json(movies) # display table with pandas df[[&#39;Title&#39;, &#39;Worldwide_Gross&#39;, &#39;Production_Budget&#39;, &#39;Distributor&#39;, &#39;MPAA_Rating&#39;, &#39;IMDB_Rating&#39;, &#39;Rotten_Tomatoes_Rating&#39;]].head() . Title Worldwide_Gross Production_Budget Distributor MPAA_Rating IMDB_Rating Rotten_Tomatoes_Rating . 0 The Land Girls | 146083.0 | 8000000.0 | Gramercy | R | 6.1 | NaN | . 1 First Love, Last Rites | 10876.0 | 300000.0 | Strand | R | 6.9 | NaN | . 2 I Married a Strange Person | 203134.0 | 250000.0 | Lionsgate | None | 6.8 | NaN | . 3 Let&#39;s Talk About Sex | 373615.0 | 300000.0 | Fine Line | None | NaN | 13.0 | . 4 Slam | 1087521.0 | 1000000.0 | Trimark | R | 3.4 | 62.0 | . Images . Local Images . You can reference local images and they will be copied and rendered on your blog automatically. You can include these with the following markdown syntax: . ![](my_icons/fastai_logo.png) . . Remote Images . Remote images can be included with the following markdown syntax: . ![](https://image.flaticon.com/icons/svg/36/36686.svg) . . Animated Gifs . Animated Gifs work, too! . ![](https://upload.wikimedia.org/wikipedia/commons/7/71/ChessPawnSpecialMoves.gif) . . Captions . You can include captions with markdown images like this: . ![](https://www.fast.ai/images/fastai_paper/show_batch.png &quot;Credit: https://www.fast.ai/2020/02/13/fastai-A-Layered-API-for-Deep-Learning/&quot;) . . Other Elements . GitHub Flavored Emojis . Typing I give this post two :+1:! will render this: . I give this post two :+1:! . Tweetcards . Typing &gt; twitter: https://twitter.com/jakevdp/status/1204765621767901185?s=20 will render this: Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 . Youtube Videos . Typing &gt; youtube: https://youtu.be/XfoYk_Z5AkI will render this: . Boxes / Callouts . Typing &gt; Warning: There will be no second warning! will render this: . Warning: There will be no second warning! . Typing &gt; Important: Pay attention! It&#39;s important. will render this: . Important: Pay attention! It&#8217;s important. . Typing &gt; Tip: This is my tip. will render this: . Tip: This is my tip. . Typing &gt; Note: Take note of this. will render this: . Note: Take note of this. . Typing &gt; Note: A doc link to [an example website: fast.ai](https://www.fast.ai/) should also work fine. will render in the docs: . Note: A doc link to an example website: fast.ai should also work fine. . Footnotes . You can have footnotes in notebooks, however the syntax is different compared to markdown documents. This guide provides more detail about this syntax, which looks like this: . For example, here is a footnote {% fn 1 %}. And another {% fn 2 %} {{ &#39;This is the footnote.&#39; | fndetail: 1 }} {{ &#39;This is the other footnote. You can even have a [link](www.github.com)!&#39; | fndetail: 2 }} . For example, here is a footnote 1. . And another 2 . 1. This is the footnote.↩ . 2. This is the other footnote. You can even have a link!↩ .",
+            "url": "http://0.0.0.0:4000/blog/jupyter/2020/02/20/test.html",
+            "relUrl": "/jupyter/2020/02/20/test.html",
+            "date": " • Feb 20, 2020"
+        }
+        
+    
+  
+    
+        ,"post1": {
+            "title": "An Example Markdown Post",
+            "content": "Example Markdown Post . Basic setup . Jekyll requires blog post files to be named according to the following format: . YEAR-MONTH-DAY-filename.md . Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and filename is whatever file name you choose, to remind yourself what this post is about. .md is the file extension for markdown files. . The first line of the file should start with a single hash character, then a space, then your title. This is how you create a “level 1 heading” in markdown. Then you can create level 2, 3, etc headings as you wish but repeating the hash character, such as you see in the line ## File names above. . Basic formatting . You can use italics, bold, code font text, and create links. Here’s a footnote 1. Here’s a horizontal rule: . . Lists . Here’s a list: . item 1 | item 2 | . And a numbered list: . item 1 | item 2 | Boxes and stuff . This is a quotation . . You can include alert boxes …and… . . You can include info boxes Images . . Code . You can format text and code per usual . General preformatted text: . # Do a thing do_thing() . Python code and output: . # Prints &#39;2&#39; print(1+1) . 2 . Formatting text as shell commands: . echo &quot;hello world&quot; ./some_script.sh --option &quot;value&quot; wget https://example.com/cat_photo1.png . Formatting text as YAML: . key: value - another_key: &quot;another value&quot; . Tables . Column 1 Column 2 . A thing | Another thing | . Tweetcards . Altair 4.0 is released! https://t.co/PCyrIOTcvvTry it with: pip install -U altairThe full list of changes is at https://t.co/roXmzcsT58 ...read on for some highlights. pic.twitter.com/vWJ0ZveKbZ . &mdash; Jake VanderPlas (@jakevdp) December 11, 2019 Footnotes . This is the footnote. &#8617; . |",
+            "url": "http://0.0.0.0:4000/blog/markdown/2020/01/14/test-markdown-post.html",
+            "relUrl": "/markdown/2020/01/14/test-markdown-post.html",
+            "date": " • Jan 14, 2020"
+        }
+        
+    
+  
+    
+        ,"post2": {
+            "title": "\\darkness",
+            "content": "if you can’t explain something in simple terms, you don’t understand it. . . update v1 . this kind of workshop ternyata takes several days, bahkan sampe dibikin bootcamp. i cramp it into 3 hours. approach nya sangat noob proof. kalo ada kesempatan lagi i’ll definitely use this as a precourse material. . kok bisa . awalnya gak nyangka diajak buat ikutan seminar. Diajak ikutan berarti asumsi awal adalah mengikuti seminar tentang data mining, bukan mengisi kan, karena dirasa saya masih perlu banyak belajar jadi saya memutuskan secara langsung gak pake mikir buat ikutan. Ternyata tidak disini diajak ikutan adalah menjadi pembicara. Awal ngeh itu ketika disuruh bikin penjelasaan algoritma SVM, Kmeans dan heiarchical. Ketika ditanya buat apa, ternyata disuruh ngisi. . hint #0. cara menaklukan hewan buas seperti mengimplementasikan dan membuat sebuah algoritma ternyata berbeda dengan menaklukan orang-orang yang ingin belajar. . hint #1. it’s not something that i really enjoy. it’s like debugging an app, but instead of one app, you’re debugging a whole class of errors. Like playing chess, but instead of 1 opponent, you’re actually playing with several people at the same time. . TLDR; simpler learning material, approach sesuai dengan background dari pesertanya or having a pre-course material given before the workshop, and having an evalution metrics whatever metric type. . lesson(s) given . of course python. pake sklearn, scipy, pandas dan numpy. oh matplotlib juga. should’ve gone with seaborn tho. . super basic sih, mainly about: . machine learning algorithms clustering: kmeans, agglomerative, dendogram | classification: svm with linear, rbf and polynomial kernels | . | exploratory data analysis making sense of data with pearson coefficient | mencari korelasi antar feature di kolom | . | data visualization basics of matplotlib. | . | . disini sebenernya lebih kepada showcasing ketimbang mengajakarkan cara membuatnya. dimana implementasi algoritma dijelaskan dengan lancar tapi memvisualisasikannya agak “cacat” karena tidak terbiasa mengotak-atik sebuah visualisasi. i should’ve go with seaborn. but i went with matplotlib instead (i’m assuming they are aware of matplotlib because it’s literally derived from the matlab plot library. they don’t.) . oh iya sama beberapa subtle “hints” of github. dimana resource sharing disini tinggal ambil dari github. . lesson(s) learned . should have gone with more structurized material . bukan beberapa ide yang “mashed together” menjadi pembelajaran, ternyata gak belajar. malah error debugging. . should’ve gone with the handout type. . you can read the comments, people without any programming background find it hard to see comments in code. use jupyternotebook markdown instead. have some latex to type the equations. (i did this, but still hard to grasp i guess.) . longer. . coding workshop is not mere 3-4 hours of talking. it’s mainly error debugging. saya berdiri di depan dengan asumsi semua sudah nyaman dengan python. ternyata tidak. yang terjadi pada saat itu adalah saya ngetik sendiri yang lainnya hanya mereka karena saya terlalu cepat. . make clear boilerplates (noob proof). . boilerplates diciptakan untuk mempercepat proses yang redundant. bukan menciptakan kebingungan yang lebih. sebebernya boilerplate nya sudah ada hanya saja akan tetapi dataset yang disediakan sudah terlalu advanced untuk membuat proof of concept. . clear backgoround about the peserta. . cukup menjadi masalah karena boilerplate yang disediakan bukan untuk non coder. jadinya ya berantakan. akhirnya malah saya sendiri yang asik di depan sementara pesertanya hanya planga plongo tidak mengerti apa yang terjadi pada datanya. bahkan melihat pip install sklearn saja sudah merasa menjadi programmer. okay welcome to the darkside then i guess. . more practice on public speaking. . seharusnya sudah tau di depan itu mau ngobrol tentang apa. terlalu advanced topiknya? jadikan diskusi. terlalu gampang topik di depan? jadikan game. skill inilah sebenernya yang bisa “adapt vastly” kepada penontonnya. memang si speaker yang memandu si penontonnya tapi penontonnya harus tau tujuan akhir bagaimanapun proses menuju tujuan akhirnya. . have some music. . it’s not a damn test. relax. buat beberapa games untuk memecah suasana, memperkecil jarak dari penonton ke pembicara. . . improvements . suitable internet connection . i know it’s indonesia assume bad internet at all times. but come on. at this scale the facilitator should’ve had priavte fast speed internet connection. you think datasets and api calls are small bandwith stuff? . pre course material. . have the peserta learned up, jadi ketika diterangkan bisa lebih ngeh dengan apa yang tidak dimengerti dan mengerti apa yang tidak diketahui. . pre-test-post-test cycle. . biar tau apakah ada improvement sebelum dan sesudah workshop. . longer. . seriously. 3-4 hours of pengantar data science itu tidak cukup. i’m trying bootcamp style. . hotel . the guest house is nice tho. i guess calling it a hotel itu lebih pantes. but… . PLEASE INSTALL A GOOD WIFI. YOU’RE NOT A HOTEL UNLESS YOU HAD A GOOD WIFI . parting words . i guess the quote by richard feynman above summarizes it. .",
+            "url": "http://0.0.0.0:4000/blog/talk/2019/03/05/posts-data-mining-UB.html",
+            "relUrl": "/talk/2019/03/05/posts-data-mining-UB.html",
+            "date": " • Mar 5, 2019"
+        }
+        
+    
+  
+    
+        ,"post3": {
+            "title": "mengenai produktifitas",
+            "content": ". Setiap hari, selalu ada saja prioritas dalam hidup, check box yang menunggu untuk dicentang, hal yang harus dirapikan dan masalah yang harus diselesaikan. Seluruh tenaga digunakan untuk berpikir di luar kotak, mencari sebuah solusi efisien nan elegan. Tapi apa betul manusia hanya hidup untuk menjadi interdependen dengan sekelilingnya? . Bayangkan dari sibuknya mengejar deadline tiap hari dengan menggunakan internet dan listrik suatu saat diambil dalam sekejap. Apakah pekerjaanmu mendefinisikan jati dirimu? atau jati dirimu yang mendefinisikan pekerjaanmu? . Kala itu deadline foto pre wedding seorang client sudah terlambat satu hari, seperti biasa saya di marahi bos saya karena tidak sesuai deadline. Alasan “mandek kreatifitas” menjadi solusi. “Belum dapet mood (suasana dalam gambar) yang bagus ni buat mas ini nih”. Sampai akhirnya terpaksa meniru mood dari produksi lain. Sampai pada suatu masa dimana seluruh foto selesai di edit harus di render dan, mati lampu. . Sebagai seorang yang berat di otak kiri saya memikirkan 3 solusi. Saya ke warkop langganan saya dimana ada pasokan listrik yang memadai dan internet yang lebih dari cukup kecepatannya untuk upload, atau ke lab komputasi dimana semuanya ada dan tinggal colok kabel LAN saja dan bisa offload render di komputer lab atau menunggu. Lekas saya mandi dan bersiap untuk ke Lab karena terkait masalah ekonomi saya memutuskan untuk upload di lab. Seolah alam tidak ingin saya pergi, hujan pun datang, jas hujan dipinjam. Seolah tidak ingin membuang duit untuk menyewa GrabCar saya memutuskan untuk menunggu dalam gelap. . Perasaan tidak melakukan apa-apa seolah tak berdaya tidak dapat “produktif demi interdependensi manusia” memnpm buat saya berpikir. Apakah manusia disebut berguna ketika dia bekerja untuk orang lain? Apakah manusia menemukan jati dirinya ketika diakui oleh orang lain? Lantas orang lain itu siapa untuk mendefinisikan jati diri kita? Apakah kita dapat menemukan jati diri kita dari kehampaan? . Dari sini perasaan dimana tidak dapat melakukan apa-apa itu sedikit demi sedikit membuat saya teringat dulu. Ketika kewajiban hanyalah untuk diri pribadi, tanggung jawab tidak sebesar dan sedewasa diri ini, belum mempunyai makna untuk berguna bagi sesama, interdependensi. . jadi apakah interdependensimu didefinisikan dari pekerjaan mu? atau dari kehampaan kamu dapat tetap berguna bagi lingkunganmu? . Rasa hampa ini membuat saya bergidik ngeri akan rasanya menuruti kedangingan manusia untuk menunda. . From a quick cheer to a standing ovation, clap to show how much you enjoyed this story. .",
+            "url": "http://0.0.0.0:4000/blog/2018/08/01/mengenai-produktifitas.html",
+            "relUrl": "/2018/08/01/mengenai-produktifitas.html",
+            "date": " • Aug 1, 2018"
+        }
+        
+    
+  
+
+  
+  
+
+  
+      ,"page1": {
+          "title": "About Me",
+          "content": "This is where you put the contents of your About page. Like all your pages, it’s in Markdown format. . This website is powered by fastpages 1. . a blogging platform that natively supports Jupyter notebooks in addition to other formats. &#8617; . |",
+          "url": "http://0.0.0.0:4000/blog/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "about me",
+          "content": "math undergrad from Institut Teknologi Sepuluh NOPEmber, studying computer science, pursuing as a machine learning engineer. I do internship in PT Multipolar Technology(2018) as a backend engineer, and Data Scientist in Otoritas Jasa Keuangan Pusat(2019), at Jakarta. . some projects: &lt;!– - debat capres with NLP, still in private cause not finished . campus student number scraper-login-saved blog post coming up –&gt; | financial news scraper and topic modelling | project files here | . | react typing speed test, but all are surabaya profanity words | project files here | . | collection of mathematics students that do internship during August 2018 periode link here | project files here | . | lecturer’s teaching assistant in OOP class using Java | . talks: . data mining workshop in UB | projects files here | blog here | . | . wadadidaw . besides coding, i enjoy photo and video editing. check my medium [here](https://medium.com/@svmihar)&lt;/small&gt; .",
+          "url": "http://0.0.0.0:4000/blog/content/pages/about.html",
+          "relUrl": "/content/pages/about.html",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
+          "title": "Contact me",
+          "content": "please don’t .",
+          "url": "http://0.0.0.0:4000/blog/content/pages/contacts.html",
+          "relUrl": "/content/pages/contacts.html",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page12": {
+          "title": "",
+          "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
+          "url": "http://0.0.0.0:4000/blog/robots.txt",
+          "relUrl": "/robots.txt",
+          "date": ""
+      }
+      
+  
+
+}

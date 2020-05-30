@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://0.0.0.0:4000/blog/2018/08/01/mengenai-produktifitas.html</loc>
+<lastmod>2018-08-01T02:46:42-05:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/talk/2019/03/05/posts-data-mining-UB.html</loc>
+<lastmod>2019-03-05T03:43:55-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/markdown/2020/01/14/test-markdown-post.html</loc>
+<lastmod>2020-01-14T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/jupyter/2020/02/20/test.html</loc>
+<lastmod>2020-02-20T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/about/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/content/pages/about.html</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/content/pages/contacts.html</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/search/</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/blog/categories/</loc>
+</url>
+</urlset>
