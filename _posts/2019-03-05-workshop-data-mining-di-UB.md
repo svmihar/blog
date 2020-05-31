@@ -2,6 +2,7 @@
 toc: false
 layout: post
 categories: [talk]
+image: https://i.imgur.com/7JBB38F.png
 description: "data mining workshop di Universitas Brawijaya"
 title: \\darkness
 ---

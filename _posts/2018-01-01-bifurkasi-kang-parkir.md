@@ -2,7 +2,7 @@
 layout: post
 title: 'bifurkasi tukang parkir.'
 category: [not-important]
-description: artinya branching. ehhe.
+description: apanya cepet apanya
 ---
 >tidak apa-apa direndahkan yang penting tidak rendahan.
 

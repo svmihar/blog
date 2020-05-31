@@ -2,6 +2,7 @@
 title: tutorial memanggil setan dengan bilangan kompleks
 layout: post
 categories: [music]
+image: https://i.imgur.com/O30KQpz.jpg
 toc: false
 description: "korelasi antara musik dan bilangan kompleks. enggak deh. koleksi podcast seorang svmihar"
 ---

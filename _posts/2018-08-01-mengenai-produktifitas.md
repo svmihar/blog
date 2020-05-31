@@ -1,14 +1,15 @@
 ---
 layout: post 
 title: mengenai produktifitas
-description: Yang kamu kejar itu apa sih?
+description: dragging or rushing?
+image: https://i.imgur.com/vNWNYSL.jpg
 categories: [produktivitas]
 ---
 
 ![ngapain aja sih](/img/1.jpeg)
 
 
-
+> jadi kamu mengejar, atau dikejar?
 
 Setiap hari, selalu ada saja prioritas dalam hidup, check box yang menunggu
 untuk dicentang, hal yang harus dirapikan dan masalah yang harus diselesaikan.

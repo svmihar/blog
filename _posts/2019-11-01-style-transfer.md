@@ -2,6 +2,7 @@
 title: 5 second style copy
 layout: post
 category: [deep-learning]
+image: https://i.imgur.com/s7WKTmA.png
 description: drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19
 ---
 
@@ -34,8 +35,7 @@ from the filter solution, this looks like the one. I was kinda happy but not sat
 Long story short it is too much of a hassle. Props to you all 3D digital artist with all those octane rendering. 
 
 Then I saw a tweet from [@vngc](https://twitter.com/vngnc) 
-<blockquote class="twitter-tweet" data-lang="id"><p lang="en" dir="ltr">TGS 2018 Death Stranding trailer processed through style transfer utilizing the convolutional neural network. Style referenced from the art of Moebius. This current iteration still failed to pick up tiny details and draw finer lines. <a href="https://t.co/LM8PfFMT6F">pic.twitter.com/LM8PfFMT6F</a></p>&mdash; izzy (@vngnc) <a href="https://twitter.com/vngnc/status/1108948246703964161?ref_src=twsrc%5Etfw">22 Maret 2019</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+**it's a tweet about neural style transfer, unfortunately he deleted his twitter ☹️**
 
 ***STYLE TRANSFER!*** - this is what I am looking for. 
 
