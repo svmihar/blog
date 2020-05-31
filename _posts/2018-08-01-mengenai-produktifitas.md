@@ -1,14 +1,8 @@
 ---
-templateKey: 'blog-post'
-title: 'mengenai produktifitas'
-date: 2018-08-01T07:46:42.000Z
-description: >-
-  Yang kamu kejar itu apa sih?
-tags:
-  - medium
-  - export
-  - produktivitas
-  - testing
+layout: post 
+title: mengenai produktifitas
+description: Yang kamu kejar itu apa sih?
+categories: [produktivitas]
 ---
 
 ![ngapain aja sih](/img/1.jpeg)

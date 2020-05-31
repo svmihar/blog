@@ -1,16 +1,9 @@
 ---
-title: \\darkness
-date: "2019-03-05T09:43:55.169Z"
-template: "post"
-draft: false
-slug: "/posts/data-mining-UB/"
-category: "talk"
-tags:
-  - "coding"
-  - "python"
-  - "data-science"
-  - "talk"
+toc: false
+layout: post
+categories: [talk]
 description: "data mining workshop di Universitas Brawijaya"
+title: \\darkness
 ---
 
 > if you can't explain something in simple terms, you don't understand it. 

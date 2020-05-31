@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>5 second style copy | svmihar’s scribble</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="5 second style copy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19" />
+<meta property="og:description" content="drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19" />
+<link rel="canonical" href="http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html" />
+<meta property="og:site_name" content="svmihar’s scribble" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html"},"description":"drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19","@type":"BlogPosting","url":"http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html","headline":"5 second style copy","dateModified":"2019-11-01T00:00:00-05:00","datePublished":"2019-11-01T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/blog/feed.xml" title="svmihar's scribble" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>5 second style copy | svmihar’s scribble</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="5 second style copy" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19" />
+<meta property="og:description" content="drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19" />
+<link rel="canonical" href="http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html" />
+<meta property="og:site_name" content="svmihar’s scribble" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html"},"description":"drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19","@type":"BlogPosting","url":"http://0.0.0.0:4000/blog/deep-learning/2019/11/01/style-transfer.html","headline":"5 second style copy","dateModified":"2019-11-01T00:00:00-05:00","datePublished":"2019-11-01T00:00:00-05:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/blog/feed.xml" title="svmihar's scribble" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">svmihar&#39;s scribble</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">about me</a><a class="page-link" href="/blog/dont/">contact me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">5 second style copy</h1><p class="page-description">drawing for commission? hahahahahahhahahahahahh come here lemme transfer your style using vgg19</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2019-11-01T00:00:00-05:00" itemprop="datePublished">
+        Nov 1, 2019
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      7 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#deep-learning">deep-learning</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <blockquote>
+  <p>wkwk, ikut conference itu feeding ego doang, existentialism</p>
+</blockquote>
+
+<blockquote>
+  <p>ah masa</p>
+</blockquote>
+
+<h1 id="neural-style-transfer-a-pycon-story">neural style transfer, a pycon story.</h1>
+
+<h2 id="just-why">just why?</h2>
+
+<p>well,  i’m in a rut of doing nlp stuff, finetuning parameters, climbing the hills and valleys of errors, I needed <del>pelarian</del> something to do without all these metrics. Looking at the empty walls of my rooms, I decided to search for posters to stick on the walls, making my room much <em>more enjoyable to look at.</em></p>
+
+<p>searching for the fittest within my preferences takes forever to finish, I constraint myself not to do manual design just ol’ plain seeing and printing, and this print is only and gonna be the only one in the world. I want it to be <em>unique and easy</em>! This narrows to:</p>
+<ul>
+  <li>band posters: meh, too mainstream, it’ll take work to make it “my style”</li>
+  <li>film posters: i am too volatile to love one particular movies, thus only got the budget for printing one.</li>
+  <li>quote posters: you got to be kidding me.</li>
+  <li>motivational quote posters: 🙃</li>
+  <li>
+    <p><del>dian sastro poster</del>
+So I still got some viable solutions like:</p>
+  </li>
+  <li>print a film photograph
+    <ul>
+      <li>cost more money, <em>maklum anak kosan</em></li>
+    </ul>
+  </li>
+  <li>edit a photo to look like it was taken from an analog film camera
+    <ul>
+      <li>this is basically a filter.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>from the filter solution, this looks like the one. I was kinda happy but not satisfied because I’m not a very skilled photographer and not many of my photos amazes me. So I decided to have a different approach with a 3D render, recreating one of my photograph.</p>
+
+<p>Long story short it is too much of a hassle. Props to you all 3D digital artist with all those octane rendering.</p>
+
+<p>Then I saw a tweet from <a href="https://twitter.com/vngnc">@vngc</a></p>
+<blockquote class="twitter-tweet" data-lang="id"><p lang="en" dir="ltr">TGS 2018 Death Stranding trailer processed through style transfer utilizing the convolutional neural network. Style referenced from the art of Moebius. This current iteration still failed to pick up tiny details and draw finer lines. <a href="https://t.co/LM8PfFMT6F">pic.twitter.com/LM8PfFMT6F</a></p>&mdash; izzy (@vngnc) <a href="https://twitter.com/vngnc/status/1108948246703964161?ref_src=twsrc%5Etfw">22 Maret 2019</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p><strong><em>STYLE TRANSFER!</em></strong> - this is what I am looking for.</p>
+
+<p>This got me hooked! well I can recreate those stuff, it’s only a CNN on a picture!  I just needed a painting style and apply it to the photograph of my choosing!</p>
+
+<p>This is surely a “filter” on steroids.</p>
+
+<h2 id="how">how?</h2>
+<p><img src="https://i.imgur.com/s7WKTmA.png" alt="" />
+so how does one copy a pattern of brush strokes, the pressure of the brushes to the canvas and the beautiful colors from the original paintings?</p>
+
+<p>let me tell you: edges.</p>
+
+<p>edges is what makes the subject different from the backgorund, contrast in between edges is what defines one brush stroke to the other. Edges is what  It’s the edges that we are looking to copy! So how does one copy “an edge” to other image?</p>
+
+<p>now by getting the edges, recreating the edges how does a human can copy a style? well you don’t we leave it to the computationally superior guys to simulate it. the computers. well the computers don’t know what’s an edge is and what’s a picture, what’s a pattern, so  they needed a good “kinda look alike edges” from the human world to the computer’s world. How? Representation!</p>
+
+<p>To obtain a representation of a style of an image, how does one define an edge? an <strong>edge is what makes a texture</strong>.  The information, or the “edges” inside the texture is what we’re trying to look for exactly. Then by representing it as an array a computer can easily simulate it in a scale that human can’t.</p>
+
+<p>But what does the computer sees exactly? <strong>pixel values</strong><em>.</em></p>
+
+<p>Because an image is just a bunch of bunch of bunch of numbers in an arrays with the value of red, green and blue values (r,g,b,a).</p>
+
+<p>But, getting the all this texture information how to distinguish between the texture that we are trying to capture and the wholesome arrangement of the image? we’re trying to copy the brush strokes not the subject of the image right?</p>
+
+<p>The representation of the styles is what we will store to an n^th dimension space. Therefore to capture its textual information, this “space” is where the VGG19 comes in.</p>
+
+<p>First of all, the layers in VGG19 will try to search the “correlation”  between result of the layers.</p>
+
+<p>Then it will try to deconstruct the input image by downsampling it.</p>
+
+<p>Finally the resulting correlation feature space or the texture we’re trying to copy will match the style to the downsampled image we’re trying to paste our texture to.</p>
+
+<p>Both of these processes are what we’re trying to create resulting a new texture information to the input image, and discarding the arrangement of the pixel from the styled image.</p>
+
+<p><strong>That my friend, is what we’re looking for. The separation of content and style representation.</strong>
+<img src="https://i.imgur.com/GSh8hqI.png" alt="" /></p>
+
+<h2 id="optimizing-the-loss">optimizing the loss</h2>
+<p>i know making something good means having a good metric to compare to, but this metric we’ll be using is actually the metric that measures the distance between the generated image, to the content and style image. 
+How do you measure the distance between images? gram matrix. 
+Before going to the gram matrix we need to clarify what are the losses</p>
+<ul>
+  <li>content loss: means the difference between the “content” in the content image to the generated image.</li>
+  <li>style loss: means the difference between the “style” in the style image to the generated image. 
+How do you measure “content” and “style”? like all mathematicians, to measure a distance we need two points to measure on. We map the content image to a hilbert space using the VGG19’s feature layer, making it a vector, then map the style image and generated image also. These vectors can be measured from the distances, seeing it as how far is it different from each other. 
+The gram matrix is the result of the inner product of the vectors. This actually shows the spatial correlation between the images. Think of it as a historgram. It doesn’t measure specific pixel to pixel or a location of the images. It calculate only the feature distribution that we wanted.</li>
+</ul>
+
+<h2 id="feature-extractors-x-transfer-learning">feature extractors x transfer learning.</h2>
+<p>My favorite. Transfer learning is used to extract what you call a texture information on an image. How do you extract it is by mapping the “patterns” of an image to a feature layer. The Think of this transfer learning as a baseline of our model, the model itself (VGG19), is a CNN architecture which used 15 million images from the ImageNet dataset, and trained on a 138 million parameters that uses 5 convolutional layers.
+<img src="https://i.imgur.com/PGhEo49.png" alt="" />
+By using VGG’s pretrained models, our model doesn’t need to learn from scratch and saving a lot of time and space, by only fine tuning the top layers, on what we wanted it to output (generated image). Both weight and biases from the pretrained model is what the feature extractors are. Diffrentiating which is which, edges, patterns, textures, brush strokes, colors, etc.</p>
+
+<h2 id="implementation">implementation</h2>
+<p>using pytorch:</p>
+<ul>
+  <li>generated a white noise for the generated image</li>
+  <li>adding style and content from the extracted features from both the content and style image</li>
+  <li>backprop and gradient descent step optimized using L-BFGS to find the loss function score</li>
+  <li>iterate till satisified with result
+The L-BFGS is just a work around on a smaller GPU capability. 
+My implementation on this is actually stack 10 scripts on each other, changing its initiation image to the output image from the previous script output. 
+<img src="https://s5.gifyu.com/images/Webp.net-gifmaker-3.gif" alt="" />
+to produce image, from the 10 scripts:</li>
+  <li>using google colab: 3045 seconds</li>
+  <li>using gradient’s p5000: 971s</li>
+</ul>
+
+<h2 id="other-implementation">other implementation</h2>
+<ul>
+  <li>maps, on maps
+<img src="https://s5.gifyu.com/images/Webp.net-gifmakerf00bd7504b5fa743.gif" alt="" /></li>
+  <li>painting on paintings
+<img src="https://s5.gifyu.com/images/Webp.net-gifmaker-1a2f653dc9c5ad9ee.gif" alt="" /></li>
+</ul>
+
+<h2 id="parting-words">parting words</h2>
+<p>I am deeply honored to be invited to be the speaker on pycon indo 2019 about this however, to make the project “demo-able” i made several improvements:</p>
+<ul>
+  <li>cycleGAN</li>
+  <li>fast-style-neural-trasnfer
+Both are a pretty good “feature extractors” with way different implementation to each other. But both has a pretty good serializeable file that I can use to generate a new image without training it again and again. Creating CLI is cool and stuff, but I decided to take a step further by making a telegram bot, try it out while its still online <a href="t.me/styletransferbot">@styletransferbot</a>!</li>
+</ul>
+
+<p>I learned a lot of things about the GANs, making art with deep learning. Sometimes learning machine learning is all about metrics: getting good prediction, less error, less biased towards certain things, more reliable and good black box models, what I get from this is programming in the society should be changed from a tool for industries to something more! something that helps us to be more expressive as humans.</p>
+
+<p>Stop making weapons of math destructions!</p>
+
+<p>Well I guess decorating my room got hell bent to a long hole of optimization problem eh.</p>
+
+  </div><a class="u-url" href="/blog/deep-learning/2019/11/01/style-transfer.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>ideas left unsaid</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/svmihar" title="svmihar"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/svmihar" title="svmihar"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
