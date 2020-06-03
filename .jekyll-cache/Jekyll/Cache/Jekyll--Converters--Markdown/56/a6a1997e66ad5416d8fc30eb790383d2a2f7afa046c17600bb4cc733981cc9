@@ -1,0 +1,225 @@
+I")?<blockquote>
+  <p><del>money</del> premature optimization is the root of all evil <sub>in programming</sub></p>
+</blockquote>
+
+<blockquote>
+  <p><small> -Donald Knuth</small></p>
+</blockquote>
+
+<h1 id="before-you-read-on">before you read on</h1>
+<p>have you ever feel, when you have moved on from a project and starting a new one, then you found out something that can actually make the prior project runs faster? well i had. so many damn times. so i hope this can be the cure of your wrath. or even before. lol.</p>
+<h2 id="background-context">background context</h2>
+<p>so before i explain the problem, you’ll need to know what is the difference between serial, paralell, and concurrent running.</p>
+
+<h2 id="serial-vs-parallelism-vs-concurrency">serial vs parallelism vs concurrency</h2>
+<p>jangan lupa referensi dari sini lur<sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup>
+referensi ini sepertinya juga menarik buat bikin penjelasannya lebih mudah<sup id="fnref:3"><a href="#fn:3" class="footnote">2</a></sup></p>
+<h3 id="serial">serial</h3>
+<p><img src="https://files.realpython.com/media/IOBound.4810a888b457.png" alt="" /></p>
+<h3 id="parallelism">parallelism</h3>
+<p><img src="https://files.realpython.com/media/Threading.3eef48da829e.png" alt="" /></p>
+<h3 id="concurrency">concurrency</h3>
+<p><img src="https://files.realpython.com/media/Asyncio.31182d3731cf.png" alt="" /></p>
+
+<h1 id="el-problemo">el problemo</h1>
+<p>Scraping is a great tool to gather (public?) data, thus the process of scraping itself is a kind of slow. In my thesis years, I need to gather a big (4GB) chunk of text from certain news site, which with python it’s kinda slow.</p>
+<h2 id="that-particular-case">that particular case</h2>
+<p>let’s start with a kompas shall we? kompas is a well known media company from Indo, thus making it quasi reliable relative to my pov, imo.</p>
+
+<p>Kompas really loves their <code class="highlighter-rouge">&lt;p&gt;</code> tags wrapped around a <code class="highlighter-rouge">&lt;div class="read__content"&gt;</code>.</p>
+
+<p>Then, given a <a href="https://github.com/svmihar/scraping-speed-test/blob/master/test_links.txt">list of kompas links</a>, we should start scraping.</p>
+
+<h1 id="el-solusiones">el solusiones</h1>
+<h2 id="scraping-method">scraping method</h2>
+<p>the method generally will consist of 5 steps.</p>
+<ol>
+  <li>read file into array of string</li>
+  <li>get the html</li>
+  <li>make the html searchable with a parser</li>
+  <li>point the appropriate html tags to scrape</li>
+  <li>profit</li>
+</ol>
+
+<h3 id="python">python</h3>
+<p>let’s start with python, it’s pretty straightforward because it only need 2 libraries to import: <code class="highlighter-rouge">requests</code> to get HTML, <code class="highlighter-rouge">bs4</code> to search the text inside the <code class="highlighter-rouge">&lt;p&gt;</code>s (parse the HTML into plain child text).</p>
+<h4 id="scrapepy">scrape.py</h4>
+<p>so given a <code class="highlighter-rouge">kompas_link</code> the soup will parse the html into a tree, then the <code class="highlighter-rouge">find</code> method fill traversely travel down the stream to search a <code class="highlighter-rouge">&lt;p&gt;</code> inside a <code class="highlighter-rouge">&lt;div&gt;</code> then make it into an array the concat the array into a string.</p>
+<details>
+    <summary>Click to show madness</summary>
+
+    ```python
+    def get_paragraf(kompas_link: str) -&gt; str:
+        r = requests.get(kompas_link)
+        reader = soup.find("div",class_="read__content")
+    ```
+</details>
+
+<h5 id="step-1">step 1</h5>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">content</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"./test_links.txt"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+</code></pre></div></div>
+<h5 id="step-2">step 2</h5>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">kompas_link</span><span class="p">)</span>
+</code></pre></div></div>
+<h5 id="step-3">step 3</h5>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s">"lxml"</span><span class="p">)</span>
+</code></pre></div></div>
+<h5 id="step-4">step 4</h5>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hasil</span> <span class="o">=</span> <span class="s">" "</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">p</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">reader</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"p"</span><span class="p">)</span> <span class="k">if</span> <span class="s">"Baca juga"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">text</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h3 id="go">go</h3>
+<p>go is fucking amusing, i use an amazing scraper library called <code class="highlighter-rouge">gocolly/colly</code> it handles requests and parsing altogether (<em>nifty eh</em>), <strong>BIG PLUS</strong>, it handles concurrency<sup id="fnref:1"><a href="#fn:1" class="footnote">3</a></sup> too.</p>
+<h4 id="scrapego">scrape.go</h4>
+<h5 id="step-1-1">step 1</h5>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">content</span><span class="p">,</span> <span class="n">_</span> <span class="o">:=</span> <span class="n">ioutil</span><span class="o">.</span><span class="n">ReadFile</span><span class="p">(</span><span class="s">"test_links.txt"</span><span class="p">)</span>
+    <span class="n">tempLink</span> <span class="o">:=</span> <span class="n">strings</span><span class="o">.</span><span class="n">Split</span><span class="p">(</span><span class="kt">string</span><span class="p">(</span><span class="n">content</span><span class="p">),</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">var</span> <span class="n">linkArray</span> <span class="p">[]</span><span class="kt">string</span>
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">link</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">tempLink</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">link</span> <span class="o">!=</span> <span class="s">""</span> <span class="p">{</span>
+            <span class="n">linkArray</span> <span class="o">=</span> <span class="nb">append</span><span class="p">(</span><span class="n">linkArray</span><span class="p">,</span> <span class="n">link</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h5 id="step-2-1">step 2</h5>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="n">pages</span> <span class="p">[]</span><span class="kt">string</span>
+<span class="n">c</span> <span class="o">:=</span> <span class="n">colly</span><span class="o">.</span><span class="n">NewCollector</span><span class="p">(</span><span class="n">colly</span><span class="o">.</span><span class="n">Async</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h5 id="step-3-1">step 3</h5>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="o">.</span><span class="n">OnHTML</span><span class="p">(</span><span class="s">"div[class=read__content]"</span><span class="p">,</span> <span class="k">func</span><span class="p">(</span><span class="n">e</span> <span class="o">*</span><span class="n">colly</span><span class="o">.</span><span class="n">HTMLElement</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">pages</span> <span class="o">=</span> <span class="nb">append</span><span class="p">(</span><span class="n">pages</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">ChildText</span><span class="p">(</span><span class="s">"p"</span><span class="p">))</span>
+    <span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="step-4-1">step 4</h4>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">link</span> <span class="o">:=</span> <span class="k">range</span> <span class="n">linkArray</span> <span class="p">{</span>
+    <span class="n">c</span><span class="o">.</span><span class="n">Visit</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+</code></pre></div></div>
+<h2 id="configurations">configurations</h2>
+<p>python 3.7.3</p>
+
+<p>go 1.14.3</p>
+
+<h1 id="results">results</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Serial</th>
+      <th>Threading</th>
+      <th>Multiprocessing</th>
+      <th>Concurrent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>python</td>
+      <td>83s</td>
+      <td>27.2s</td>
+      <td>18.6s</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>go</td>
+      <td><strong>21s</strong></td>
+      <td>-</td>
+      <td>-</td>
+      <td><strong>10.5</strong>s</td>
+    </tr>
+    <tr>
+      <td>pycurl</td>
+      <td>83s</td>
+      <td>27.2s</td>
+      <td>18.6s</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="why-is-python-slow">why is python slow?</h2>
+<p>dissecting its <code class="highlighter-rouge">get_paragraph</code> function we can see that
+<img src="https://i.imgur.com/xbq8PPZ.png" alt="" /></p>
+
+<p>there are two main events here:</p>
+<ol>
+  <li>the <code class="highlighter-rouge">requests</code></li>
+  <li>the parser <code class="highlighter-rouge">bs4</code> and <code class="highlighter-rouge">lxml</code></li>
+</ol>
+
+<h3 id="requests">requests</h3>
+<p><img src="https://i.imgur.com/HpkyZsT.png" alt="" />
+every requests get call needed 0.4s to return. this is the result of <code class="highlighter-rouge">requests</code> library that neede to:</p>
+<blockquote>
+  <p>requests.get → session.send → urlopen._make_request → validate connection → connect → wrap_socket → return html</p>
+</blockquote>
+
+<h3 id="parser">parser</h3>
+<p><img src="https://i.imgur.com/Wy8uwLq.png" alt="" />
+every time we need to find the appropriate <code class="highlighter-rouge">&lt;p&gt;</code> tag the bs4 calls so many things, <strong>BUT</strong> the call speed are logarithmic, which mean the bigger the data the faster it goes constant. amazing.</p>
+
+<h3 id="constantly-growing-you-say">Constantly growing you say?</h3>
+<p>let’s see if the method is called 200 times. keep in mind this is run serially.
+<img src="https://i.imgur.com/qqyHl1J.png" alt="" />
+as you can see, the more links you provide the slower requests goes, but not bs4 and lxml</p>
+
+<h2 id="python-method-calling-graph">python method calling graph</h2>
+<p><img src="https://i.imgur.com/DRCpxtp.png" alt="" /></p>
+
+<p>well now as you can see python method call heavily relied on requests, while it takes a long time to do the call. well this is only 200 links, can you imagine if you’re scraping 5*10^4 links? you’ll need a sleeping bag and a good coffee.</p>
+
+<h2 id="so-why-is-go-winning">so why is go winning?</h2>
+<p>im not going into the details of the gocolly’s method calls to return a response from kompas’ server, but let us see the graph of all method calls from go’s profiler
+<img src="https://i.imgur.com/GedWqfT.png" alt="" /></p>
+
+<p>to call a function in go, it doesn’t takes too much time, by average it took 0.00002s per function call, compared to python’s 0.00051s. (function calls are the amount of vertices, or duration from traveling from a node to other node)</p>
+
+<p>this is the result of compiled language. Go, being a compiled language doesn’t need to import and make crazy ass tranformation to make the code running. After compiling, the code has already transformed into a bytcode which is a runnable machine readable procedures. whereas python, needed to be “interpreted” everytime it runs.</p>
+
+<p>to put it simply, Golang, firstly build the code into bytecodes, then the machine runs the bytecode. while Python needed time to convert the code into bytecodes to run it, everytime. So which is faster? a tool that has be to be assembled first, or ready to go tools? (tool == program)</p>
+
+<h1 id="conclusion">conclusion</h1>
+<p>when it comes to concurrency, hands down there’s no match goroutine’s to the python’s multiprocessing / threading modules.</p>
+
+<p>so don’t be afraid to make your code faster with go’s goroutine if you’re problem is an i/o bound one.</p>
+
+<h2 id="parting-words">parting words</h2>
+<p>look i know i make python really bad here, python is actually made from cython. i can code in cython but what differences would it make? a minor one i guess. cython is good for computation, i bet when it comes to a computation problem go and cython (or python + numpy) won’t have a big difference in running time, but on I/O bound cases like this (saving it to disk stuff) concurrency always wins, and the closer you are to code bytecode, the faster and more optimized code you’ll have.</p>
+
+<p>aside from run time, efficiency and all those stupid jargons that i used above, when it comes to the duration to make  a script, hands down python is so much easier. it’s up to you to decide whether minimizing the time to code or time to execute.</p>
+
+<h1 id="future-improvements">future improvements</h1>
+<h2 id="faster-than-requests">faster-than-requests</h2>
+<p>entah kenapa selalu error walaupun build dari source, maybe later kalo udah ada waktu, akan di update.</p>
+
+<h2 id="pycurl-without-ssl">pycurl (without ssl)</h2>
+<p>beberapa orang saranin kalo emang cuman buat crawling info biasa gak perlu pake SSL (encrypted packets sent through the networks), bisa lebih cepet daripada requests… well</p>
+<h3 id="threading">threading.</h3>
+<p>seg fault. pasti gara2 buffer io ini tidak thread safe hmm
+<img src="https://i.imgur.com/299aELD.png" alt="" /></p>
+<h3 id="multiprocessing-its-the-fastest-there-is">multiprocessing (it’s the fastest there is)</h3>
+<p><img src="https://i.imgur.com/pYlFdDl.png" alt="" />
+it’s kinda fast.
+i won’t profile the memory, but im assuming there are no validation on connection handshake between local and kompas’ server</p>
+
+<h2 id="distributed-parallel">distributed parallel</h2>
+<h2 id="rolling-proxy-biar-gak-sering-di-ip-ban">rolling proxy biar gak sering di ip ban</h2>
+
+<h1 id="footnotes">footnotes</h1>
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p><a href="https://github.com/gocolly/colly">gocolly documentations</a> <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p><a href="https://realpython.com/python-concurrency/#how-to-speed-up-a-cpu-bound-program">real python concurrency explanation</a> <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:1">
+      <p><a href="https://talks.golang.org/2012/waza.slide">amazing explanation of parallelism vs concurrency</a> <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+:ET

@@ -46,6 +46,7 @@ mainly soft skill buat programmer
 
 ## life
 entah kenapa udah males. haha. jadi banyak pivot ke entertaiment, atau easy listening aja
+- eric weinstein's the portal: this guy for sure doesn't drink the normie social kool aids. amazing personality and curiosity. interesting topics around things that are actually in front of my eyes. 
 - Freakonomics radio: reality check. radio dengan penjelasan kondisi sekarang yang gak bertele-tele
 - explain the universe: podcast halu, suka nanya pertanyaan yang bikin hMMhmhmmmmMMMmm, contoh: gimana kalo matahari jadi 2x lebih besar, konstanta paling konstan di dunia. halu suer.
 - corridor cast: salah satu vfx di LA, orangnya seru mirip engineer tapi vfx artist.
